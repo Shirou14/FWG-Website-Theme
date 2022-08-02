@@ -1,0 +1,32 @@
+{{#if isSecondary}}
+    <ul class="nav" role="menu">
+        {{#foreach navigation}}
+            <li class="nav-{{slug}}" role="menuitem">
+                <a href="{{url}}">
+                    <svg class="icon" role="img" aria-label="{{slug}} icon">
+                        <title>{{slug}}</title>
+                        <use xlink:href="#{{slug}}"></use>
+                    </svg>
+                </a>
+            </li>
+        {{/foreach}}
+    </ul>
+{{else}}
+    <nav class="navbar is-primary">
+            <div class="container">
+                <div class="navbar-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav navbar-menu is-expanded level" role="menu">
+                    {{#foreach navigation}}
+                        <li class="{{link_class for=(url) class=(concat "nav-" slug)}} level-item" role="menuitem">
+                            <a class="navbar-item is-justify-content-center" href="{{url absolute="true"}}"><b>{{label}}</b></a>
+                        </li>
+                    {{/foreach}}
+                    {{> social_media}}
+                </ul>
+            </div>
+        </nav>
+{{/if}}

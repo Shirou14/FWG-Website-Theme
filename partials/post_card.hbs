@@ -1,0 +1,35 @@
+<article class="card card-equal-height">
+    <div class="card-header">
+        <div>
+            <h1 class="card-header-title pb-1"><a href="{{url}}">{{title}}</a></h1>
+            {{#primary_author}}
+              <!--  {{#if profile_image}}
+                    <div class="media">
+                        <div class="media-right">
+                            <figure class="image is-48x48">
+                                <img src="{{profile_image}}" alt="{{name}}" class="is-rounded">
+                            </figure>
+                        </div>
+                        <h2 class="card-header-title subtitle is-6 media-content"><i>By {{name}}</i></h2>
+                    </div>
+                {{/if}}-->
+                <h2 class="subtitle is-6 media-content ml-5 mb-2"><i>By {{name}}</i></h2>
+            {{/primary_author}}
+        </div>
+    </div>
+    <div class="card-content">
+        <div class="content">
+            <p class="has-text-dark">
+                {{#if meta_description}}
+                    {{meta_description}}
+                {{else}}
+                    {{excerpt words="40"}}...
+                {{/if}}
+            </p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <div class="card-footer-item">{{#primary_tag}}<a href="{{url}}" class="tag">{{name}}</a>{{/primary_tag}}</div>
+        <div class="card-footer-item"><h4 class="subtitle is-7"><i>{{date}}</i></h4></div>
+    </footer>
+</article>

@@ -1,0 +1,15 @@
+{{!< default}}
+
+{{#post}}
+    <article class="box container is-widescreen mt-5">
+        <header class="post__background-image mb-6" style="background-image: url({{feature_image}})">
+            <div class="post__background-image-text has-background-white">
+                <h1 class="title is-1">{{title}}</h1>
+                <h2 class="subtitle is-4">By {{#authors}}{{name}}{{/authors}}</h2>
+            </div>
+        </header>
+        <section class="content has-text-dark">
+            {{content}}
+        </section>
+    </article>
+{{/post}}

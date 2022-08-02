@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set your brand colors
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+$ghost-accent-color: #A6001F;
+$resource-yellow: goldenrod;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $ghost-accent-color;
+$link: $primary;//$pink;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+/*********************************
+Article card changes
+*********************************/
+$card-radius: .5rem;
+
+article.card {
+  border-style: solid;
+  border-color: black;
+}
+
+.card-equal-height {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-equal-height .card-footer {
+  margin-top: auto;
+}
+
+/*********************************
+navbar changes
+*********************************/
+$navbar-item-color: white;
+
+.navbar-item {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-item:hover {
+  color: $primary;
+}
+
+
+/*********************************
+Text/Font changes
+*********************************/
+.title, .title.is-1, .title.is-2, .title.is-3, .title.is-4, .title.is-5, .title.is-6 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, serif;
+}
+
+p {
+  color: black;
+}
+
+// Import only what you need from Bulma
+@import "../../../node_modules/bulma/bulma.sass";

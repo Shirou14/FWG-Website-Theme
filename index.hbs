@@ -1,0 +1,18 @@
+{{!< default}}
+
+<main class="container">
+    <div class="columns is-multiline pt-5 pb-5 mx-4">
+        {{#foreach posts}}
+            {{#if @index}}
+                <div class="column is-one-third is-centered">
+                    {{> post_card}}
+                </div>
+            {{else}}
+                <div class="column is-full is-centered">
+                    {{> post_card}}
+                </div>
+            {{/if}}
+
+        {{/foreach}}
+    </div>
+</main>

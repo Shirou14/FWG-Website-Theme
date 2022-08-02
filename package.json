@@ -1,0 +1,35 @@
+{
+    "name": "leggy-theme",
+    "description": "A theme for FWG",
+    "version": "0.0.1",
+    "engines": {
+        "ghost": ">=4.3.3",
+        "ghost-api": "v4"
+    },
+    "author": {
+        "name": "Shirou",
+        "email": "shirou14@hotmail.com"
+    },
+    "config": {
+        "posts_per_page": 7
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.2.5",
+        "beeper": "^2.1.0",
+        "bulma": "^0.9.2",
+        "cssnano": "^5.0.2",
+        "gulp": "^4.0.2",
+        "gulp-livereload": "^4.0.2",
+        "gulp-postcss": "^9.0.0",
+        "gulp-sass": "^4.1.0",
+        "gulp-uglify": "^3.0.2",
+        "postcss-color-mod-function": "^2.4.3",
+        "postcss-easy-import": "^3.0.0",
+        "pump": "^2.0.1"
+    },
+    "scripts": {
+        "dev": "gulp",
+        "pretest": "gulp build",
+        "scss": "gulp scss"
+    }
+}
