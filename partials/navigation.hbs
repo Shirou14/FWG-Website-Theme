@@ -12,21 +12,39 @@
         {{/foreach}}
     </ul>
 {{else}}
-    <nav class="navbar is-primary">
-            <div class="container">
-                <div class="navbar-burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="nav navbar-menu is-expanded level" role="menu">
-                    {{#foreach navigation}}
-                        <li class="{{link_class for=(url) class=(concat "nav-" slug)}} level-item" role="menuitem">
-                            <a class="navbar-item is-justify-content-center" href="{{url absolute="true"}}"><b>{{label}}</b></a>
-                        </li>
-                    {{/foreach}}
-                    {{> social_media}}
-                </ul>
+    <nav class="navbar is-primary" role="navigation">
+        <div class="container is-max-widescreen">
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </nav>
+            <div class="navbar-menu">
+                <div class="navbar-start columns mb-0 mt-0 has-text-centered">                    
+                    <!--{{#foreach navigation}}
+                    <li class="{{link_class for=(url) class=(concat "nav-" slug)}} level-item" role="menuitem">
+                        <a class="navbar-item is-justify-content-center" href="{{url absolute="true"}}"><b>{{label}}</b></a>
+                    </li>
+                    {{/foreach}}-->
+                    <a class="navbar-item column" href="/"><b>Home</b></a>
+                    <div class="navbar-item has-dropdown is-hoverable column">
+                        <a class="navbar-link navbar-item" href="{{url absolute="true"}}"><b>Join the Guild</b></a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="{{url absolute="true"}}"><b>Guild By-Laws</b></a>
+                            <a class="navbar-item" href="{{url absolute="true"}}"><b>Code of Conduct</b></a>
+                        </div>
+                    </div>
+                    <a class="navbar-item column" href="/"><b>Member Directory</b></a>
+                    <a class="navbar-item column" href="/"><b>Furry Writers Market</b></a>
+                    <div class="navbar-item has-dropdown is-hoverable column">
+                        <a class="navbar-link navbar-item" href="{{url absolute="true"}}"><b>Suggested Reading</b></a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="{{url absolute="true"}}"><b>Where to Purchase</b></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-end">{{> social_media}}</div>
+            </div>
+        </div>
+    </nav>
 {{/if}}

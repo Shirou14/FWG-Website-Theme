@@ -51,6 +51,7 @@ article.card {
 navbar changes
 *********************************/
 $navbar-item-color: white;
+$navbar-subitem-color: black;
 
 .navbar-item {
   width: 100%;
@@ -59,6 +60,10 @@ $navbar-item-color: white;
 
 .navbar-item:hover {
   color: $primary;
+}
+
+.navbar-dropdown a.navbar-item{
+  color: $navbar-subitem-color;
 }
 
 
