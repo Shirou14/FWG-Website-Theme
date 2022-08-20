@@ -53,19 +53,24 @@ navbar changes
 $navbar-item-color: white;
 $navbar-subitem-color: black;
 
-.navbar-item {
-  width: 100%;
-  height: 100%;
+.navbar {
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
-.navbar-item:hover {
-  color: $primary;
+.navbar .navbar-menu {
+  flex-grow: initial;
+  flex-shrink: initial;
 }
 
-.navbar-dropdown a.navbar-item{
+.navbar-start .navbar-item {
+  min-width: 100px;
+}
+
+.navbar-dropdown .navbar-item {
   color: $navbar-subitem-color;
 }
-
 
 /*********************************
 Text/Font changes
