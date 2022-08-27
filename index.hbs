@@ -1,18 +1,24 @@
 {{!< default}}
 
 <main class="container">
-    <div class="columns is-multiline pt-5 pb-5 mx-4">
-        {{#foreach posts}}
-            {{#if @index}}
-                <div class="column is-one-third is-centered">
-                    {{> post_card}}
-                </div>
-            {{else}}
-                <div class="column is-full is-centered">
-                    {{> post_card}}
-                </div>
-            {{/if}}
+    {{#foreach posts}}
+        {{#if featured}}
+            {{> feature_card}}
+        {{/if}}
+    {{/foreach}}
 
-        {{/foreach}}
+    <div class="columns is-multiline pt-5 pb-5 mx-4">
+        <div class="column side-bar is-one-fifth pr-0">
+            {{> contact_card}}
+            {{> reach_out_card}}
+        </div>
+
+        <div class="column is-centered">
+            {{#foreach posts}}
+                {{^if featured}}
+                    {{> post_card}}
+                {{/if}}
+            {{/foreach}}
+        </div>
     </div>
 </main>

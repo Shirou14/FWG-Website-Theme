@@ -2,9 +2,37 @@
 
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import "../../../node_modules/bulma/sass/utilities/functions.sass";
+@import "../../../node_modules/bulma/sass/utilities/initial-variables.sass";
 
 // Set your brand colors
-$purple: #8A4D76;
+$purple-invert: invert($purple);
+$purple-light: findLightColor($purple);//#feecfe;
+$purple-dark: findDarkColor($purple);;//#3a013a;
+$purple-darker: #3a013a;
+
+$orange-invert: invert($orange);
+$orange-light: findLightColor($orange);
+$orange-dark: findDarkColor($orange);
+
+$interview: $purple;//#8f088f;
+$interview-invert: invert($interview);
+$interview-light: findLightColor($interview);//#feecfe;
+$interview-dark: #8f088f;//findDarkColor($interview);//#3a013a;
+$interview-darker: #3a013a;//findDarkColor($interview-dark);
+
+$announcement: #ffdd57;
+$announcement-invert: invert($announcement);
+$announcement-light: #fffaeb;
+$announcement-dark: #946c00;
+$announcement-darker: #542600;
+
+$submission: #257942;
+$submission-invert: invert($submission);
+$submission-light: #effaf3;
+$submission-dark: #257942;
+$submission-darker: #15452F;
+
 $pink: #FA7C91;
 $brown: #757763;
 $beige-light: #D0D1CD;
@@ -17,9 +45,10 @@ $family-sans-serif: "Nunito", sans-serif;
 $grey-dark: $brown;
 $grey-light: $beige-light;
 $primary: $ghost-accent-color;
+$primary-dark: #530000;
 $link: $primary;//$pink;
-$widescreen-enabled: false;
-$fullhd-enabled: false;
+//$widescreen-enabled: false;
+//$fullhd-enabled: false;
 
 // Update some of Bulma's component variables
 $body-background-color: $beige-lighter;
@@ -27,39 +56,153 @@ $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 
+/*********************************
+navbar changes
+*********************************/
+$navbar-item-color: white;
+$navbar-subitem-color: black;
+
 // Set some standard variables for different theme colours
 //**Default Card Theme**//
-$card-default-background-color: #fffbeb;
+//$card-default-Header-background-color: $primary-light;
+$card-default-Header-background-color-shade: #e7cbcf;
+$card-default-title-color: $primary-dark;
+$card-default-subtitle-color: #695C5E;
 $card-default-line-color: #363636;
-$card-default-text-color: #2160c4;
+$card-default-line-color-light: #969696;
+$card-default-text-color: black;
+
+//**Interview Card Theme**//
+$card-interview-Header-background-color: $interview-light;
+$card-interview-Header-background-color-shade: #DEBFDE;
+$card-interview-title-color: $interview-darker;
+$card-interview-subtitle-color: #5E515E;
+
+//**Call for Submissions Theme**//
+$card-submission-title-color: #15452F;
+$card-submission-Header-background-color-shade: #B5E8D1;
+$card-submission-subtitle-color: #515E52;
+
+//**Call for announcement Theme**//
+$card-announcement-title-color: #542600;
+$card-announcement-Header-background-color-shade: #CCB36E;
+$card-announcement-subtitle-color: #8F7B56;
+
+$custom-colors: (
+  "interview": ($interview, $interview-invert, $interview-light, $interview-dark),
+  "purple": ($purple, $purple-invert, $purple-light, $purple-dark),
+  "announcement": ($announcement, $announcement-invert, $announcement-light, $announcement-dark, $announcement-darker),
+  "submission": ($submission, $submission-invert, $submission-light, $submission-dark),
+  "orange": ($orange, $orange-invert, $orange-light, $orange-dark)
+);
+
+/*********************************
+Bulma Import changes; All Parameter changes should be above
+*********************************/
+@import "../../../node_modules/bulma/bulma.sass";
 
 /*********************************
 Article card changes
 *********************************/
 $card-radius: .1rem;
 
-article.card {
-  background-color: $card-default-background-color;
-}
-
-article.card.lib-card .card-content {
-  border-top-style: solid;
-  border-top-color: $card-default-line-color;
-  border-top-width: 1px;
-}
-
-article.card.lib-card .card-header .card-header-title, article.card .card-header .subtitle.media-content {
-  font-family: 'Times New Roman', Times, serif;
-}
-
-.card-equal-height {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
+//all cards
 .card-equal-height .card-footer {
   margin-top: auto;
+}
+
+//Default
+article.post-card {
+  border-left-width: .3em;
+  border-left-color: $primary;
+  border-left-style: solid;
+}
+
+article.post-card .card-header {
+  background-color: $primary-light;
+  color: $card-default-subtitle-color;
+}
+
+article.post-card .card-header h1.title{
+  color: $primary-dark;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, serif;
+}
+
+article.post-card .card-header h1.subtitle{
+  color: $card-default-subtitle-color;
+}
+
+//interview
+article.post-card.interview {
+  border-left-width: .3em;
+  border-left-color: $interview-dark;
+  border-left-style: solid;
+}
+
+article.post-card.interview .card-header {
+  background-color: $interview-light;
+  color: $card-interview-subtitle-color;
+}
+
+article.post-card.interview .card-header h1.title{
+  color: $interview-darker;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, serif;
+}
+
+article.post-card.interview .card-header h1.subtitle{
+  color: $card-interview-subtitle-color;
+}
+
+//Submission
+article.post-card.submission {
+  border-left-width: .3em;
+  border-left-color: $success-dark;
+  border-left-style: solid;
+}
+
+article.post-card.submission .card-header {
+  background-color: $success-light;
+  color: $card-submission-subtitle-color;
+}
+
+article.post-card.submission .card-header h1.title{
+  color: $card-submission-title-color;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, serif;
+}
+
+article.post-card.submission .card-header h1.subtitle{
+  color: $card-submission-subtitle-color;
+}
+
+//announcement
+$card-announcement-Header-background-color: $warning-light;
+
+article.post-card.announcement {
+  border-left-width: .3em;
+  border-left-color: $warning-dark;
+  border-left-style: solid;
+}
+
+article.post-card.announcement .card-header {
+  background-color: $warning-light;
+  //background: linear-gradient(180deg, $card-announcement-Header-background-color 55%, $card-announcement-Header-background-color-shade 100%);
+  color: $card-announcement-subtitle-color;
+}
+
+article.post-card.announcement .card-header h1.title{
+  color: $card-announcement-title-color;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, serif;
+}
+
+article.post-card.announcement .card-header h1.subtitle{
+  color: $card-announcement-subtitle-color;
+}
+
+//feature card
+article.feature-card.card {
+  border-bottom-width: .3em;
+  border-bottom-color: $info-dark;
+  border-bottom-style: solid;
 }
 
 /*********************************
@@ -91,11 +234,15 @@ Hero Header changes
 }
 
 /*********************************
+Link changes
+*********************************/
+article.contact-card.message div.message-body ul.links li a {
+  text-decoration: none!important;
+}
+
+/*********************************
 navbar changes
 *********************************/
-$navbar-item-color: white;
-$navbar-subitem-color: black;
-
 .navbar {
   display: flex;
   align-content: center;
@@ -116,6 +263,11 @@ $navbar-subitem-color: black;
 }
 
 /*********************************
+Tag changes
+*********************************/
+
+
+/*********************************
 Text/Font changes
 *********************************/
 .title, .title.is-1, .title.is-2, .title.is-3, .title.is-4, .title.is-5, .title.is-6 {
@@ -126,5 +278,7 @@ p {
   color: black;
 }
 
-// Import only what you need from Bulma
-@import "../../../node_modules/bulma/bulma.sass";
+.stamp, .stamp.date {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+}

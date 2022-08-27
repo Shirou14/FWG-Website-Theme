@@ -1,0 +1,30 @@
+<article class="feature-card card mb-1 mt-2">
+        <div class="card-header has-background-info-dark">
+            <a class="" href="{{url}}">
+                <h1 class="card-header-title title is-3 has-text-white">{{title}}</h1>
+            </a>
+        </div>
+
+        <div class="card-content columns pb-0 pt-4 mb-0">
+
+            <div class="content column is-auto pb-0 pt-0">
+                <p class="has-text-black">
+                    {{#if meta_description}}
+                        {{meta_description}}
+                    {{else}}
+                        {{excerpt words="80"}}...
+                    {{/if}}
+                </p>
+            </div>
+        </div>
+
+        <footer class="card-footer">
+            <div class="card-footer-item">
+                <a href="{{url}}" class="">
+                    <button class="button is-info is-light has-text-weight-bold">
+                        Read More...
+                    </button>
+                </a>
+            </div>
+        </footer>
+</article>

@@ -1,35 +1,57 @@
-<article class="card card-equal-height lib-card">
-    <div class="card-header is-shadowless">
-        <div>
-            <h1 class="card-header-title has-text-weight-normal"><a href="{{url}}">{{title}}</a></h1>
-            {{#primary_author}}
-              <!--  {{#if profile_image}}
+<article class="post-card {{primary_tag.name}} card mb-3">
+        <div class="card-header is-fullwidth">
+            <div class="">
+                <a href="{{url}}">
+                    <h1 class="card-header-title title is-4 is-spaced title-name pb-0">{{title}}</h1>
+                </a>
+                {{#primary_author}}
+                <button class="card-header-icon pt-0">
                     <div class="media">
-                        <div class="media-right">
-                            <figure class="image is-48x48">
-                                <img src="{{profile_image}}" alt="{{name}}" class="is-rounded">
-                            </figure>
+                        <div class="media-left mr-2">
+                            {{#if profile_image}}
+                                <figure class="image is-48x48">
+                                    <img class="is-rounded" src="{{profile_image}}" alt="Placeholder image">
+                                </figure>
+                            {{else}}
+                                <span class="icon is-large">
+                                    <i class="fas fa-2x fa-paw"></i>
+                                </span>
+                            {{/if}}
                         </div>
-                        <h2 class="card-header-title subtitle is-6 media-content"><i>By {{name}}</i></h2>
+
+                        <div class="media-content">
+                            <h1 class="card-header-title subtitle is-5 is-italic author-name pl-0">
+                                by {{name}}
+                            </h1>
+                        </div>
                     </div>
-                {{/if}}-->
-                <h2 class="subtitle media-content has-text-weight-normal"><i>By {{name}}</i></h2>
-            {{/primary_author}}
+                </button>
+                    
+                {{/primary_author}}
+
+            </div>
         </div>
-    </div>
-    <div class="card-content">
-        <div class="content">
-            <p class="has-text-dark">
-                {{#if meta_description}}
-                    {{meta_description}}
-                {{else}}
-                    {{excerpt words="40"}}...
-                {{/if}}
-            </p>
+
+        <div class="card-content columns pb-0">
+            <div class="content column is-auto">
+                <p class="has-text-dark">
+                    {{#if meta_description}}
+                        {{meta_description}}
+                    {{else}}
+                        {{excerpt words="80"}}...
+                    {{/if}}
+                </p>
+            </div>
         </div>
-    </div>
-    <footer class="card-footer">
-        <div class="card-footer-item">{{#primary_tag}}<a href="{{url}}" class="tag">{{name}}</a>{{/primary_tag}}</div>
-        <div class="card-footer-item"><h4 class="subtitle is-7"><i>{{date}}</i></h4></div>
-    </footer>
+
+        <footer class="card-footer">
+            <div class="card-footer-item">
+                <h4 class="date">{{date}}</h4>
+            </div>
+            <div class="card-footer-item">
+                {{#primary_tag}}
+                    <a href="{{url}}" class="is-{{name}} is-primary is-light tag">{{name}}</a>
+                {{/primary_tag}}
+            </div>
+        </footer>
 </article>
