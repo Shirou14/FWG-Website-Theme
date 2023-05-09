@@ -1,7 +1,7 @@
 {
     "name": "leggy-theme",
     "description": "A theme for FWG",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "ghost": ">=4.3.3",
         "ghost-api": "v4"

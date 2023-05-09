@@ -8,11 +8,15 @@
 
     <link rel="stylesheet" href="/assets/built/mystyles.css">
     <script src="https://kit.fontawesome.com/58312b3492.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/navbar.js"></script>
 
     {{ghost_head}}
 </head>
 <body class="has-background-dark">
-    {{> header}}
+    <a href="/">
+        {{> header}}
+    </a>
+    
     {{{body}}}
 
     {{> footer}}

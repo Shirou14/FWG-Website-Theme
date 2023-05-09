@@ -1,64 +1,63 @@
-<nav class="navbar is-primary" aria-label="main navigation">
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
 
     <div class="navbar-brand">
-        <div class="navbar-burger">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNavigation">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </a>
     </div>
 
-    <div class="navbar-menu">
-
+    <div id="mainNavigation" class="navbar-menu">
         <div class="navbar-start">
             <a class="navbar-item has-text-weight-bold" href="/">
                 Home
             </a>
 
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link has-text-weight-bold" href="/">
+                <div class="navbar-link has-text-weight-bold">
                     About Us
-                </a>
+                </div>
                 <div class="navbar-dropdown">
-                    <a class="navbar-item has-text-weight-bold" href="guild-by-laws">
+                    <a class="navbar-item has-text-weight-bold" href="/guild-by-laws">
                         Guild By-Laws
                     </a>
-                    <a class="navbar-item has-text-weight-bold" href="code-of-conduct">
+                    <a class="navbar-item has-text-weight-bold" href="/code-of-conduct">
                         Code of Conduct
                     </a>
                 </div>
             </div>
 
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link has-text-weight-bold" href="/">
+                <div class="navbar-link has-text-weight-bold">
                     Members
-                </a>
+                </div>
 
                 <div class="navbar-dropdown">
-                    <a class="navbar-item has-text-weight-bold" href="member-directory">
+                    <a class="navbar-item has-text-weight-bold" href="/member-directory">
                         Member Directory
                     </a>
-                    <a class="navbar-item has-text-weight-bold" href="join-us">
+                    <a class="navbar-item has-text-weight-bold" href="/join-us">
                         Join Us!
                     </a>
                 </div>
             </div>
 
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link has-text-weight-bold" href="/">
+                <div class="navbar-link has-text-weight-bold">
                     Resources
-                </a>
+                </div>
 
                 <div class="navbar-dropdown">
-                    <a class="navbar-item has-text-weight-bold" href="suggested-reading">
+                    <a class="navbar-item has-text-weight-bold" href="/suggested-reading">
                         Suggested Reading
                     </a>
 
-                     <a class="navbar-item has-text-weight-bold" href="where-to-purchase">
+                     <a class="navbar-item has-text-weight-bold" href="/where-to-purchase">
                         Where to Purchase
                     </a>
 
-                    <a class="navbar-item has-text-weight-bold" href="furry-writers-market">
+                    <a class="navbar-item has-text-weight-bold" href="/furry-writers-market">
                         Furry Writers Market
                     </a>
                     
@@ -86,9 +85,103 @@
 
         </div>
 
-        <div class="navbar-end ml-5">
+        <div class="navbar-end ml-5 is-hidden-touch">
             {{> social_media}}
         </div>
+        
+        <hr class="navbar-divider">
 
+        <div class="is-hidden-desktop reach-out-mobile">
+            <div class="mt-4 pr-3 pl-3">
+                <h1 class="title is-5 has-text-weight-semibold">Keep Up With Us!</h1>
+                <ul class="links has-text-primary">
+                    <li class="mb-1">
+                        <a href="https://twitter.com/FurWritersGuild" target="blank_">
+                            <span class="icon-text">
+                                <span class="icon">
+                                    <i class="fab fa-twitter"></i>
+                                </span>
+                            </span>
+                            <span>
+                                Twitter
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="mb-1">
+                        <a href="https://discord.gg/t4N2u4f" target="blank_">
+                            <span class="icon-text">
+                                <span class="icon">
+                                    <i class="fab fa-discord"></i>
+                                </span>
+                            </span>
+                            <span>
+                                Discord
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="mb-1">
+                        <a href="https://t.me/FWGLobby" target="blank_">
+                            <span class="icon-text">
+                                <span class="icon">
+                                    <i class="fab fa-telegram"></i>
+                                </span>
+                            </span>
+                            <span>
+                                Telegram
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="mb-1">
+                        <a href="http://www.furaffinity.net/user/furwritersguild" target="blank_">
+                            <span class="icon-text">
+                                <figure class="image is-24x24">
+                                    <img src="/assets/img/fa_icon_primary.png">
+                                </figure>
+                            </span>
+                            <span>
+                                Fur Affinity
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="mb-1">
+                        <a href="http://furwritersguild.sofurry.com/" target="blank_">
+                            <span class="icon-text">
+                                <figure class="icon image pt-1">
+                                    <img src="/assets/img/sf_icon_primary.png" width="24" height="16">
+                                </figure>
+                            </span>
+                            <span>
+                                SoFurry
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="mb-1">
+                        <a href="https://fwg.makyo.io/" target="blank_">
+                            <span class="icon-text">
+                                <span class="icon">
+                                    <i class="fab fa-discourse"></i>
+                                </span>
+                            </span>
+                            <span>
+                                FWG Forums
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <br/>
+                <h1 class="title is-5 has-text-centered has-text-weight-semibold mb-2">Support the Guild!</h1>
+                
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UTEDKQ8C37UL8&source=url" class="" style="text-decoration: none;" target="blank_">
+                    <button class="button is-primary is-outlined is-fullwidth has-text-weight-bold">
+                        Donate via PayPal!
+                    </button>
+                </a>
+            </div>
+        </div>
     </div>
 </nav>

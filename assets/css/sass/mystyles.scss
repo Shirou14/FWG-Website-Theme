@@ -262,6 +262,12 @@ navbar changes
   color: $navbar-subitem-color;
 }
 
+@media (max-width: 1023px) {
+  .navbar-start .navbar-item, .navbar-start .navbar-item .navbar-link  {
+   color: $navbar-subitem-color;
+  }
+}
+
 /*********************************
 Tag changes
 *********************************/

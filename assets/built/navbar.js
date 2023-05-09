@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",()=>{const e=Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"),0);e.forEach(a=>{a.addEventListener("click",()=>{var e=a.dataset.target;const t=document.getElementById(e);a.classList.toggle("is-active"),t.classList.toggle("is-active")})})});
+//# sourceMappingURL=navbar.js.map

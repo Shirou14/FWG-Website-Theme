@@ -85,10 +85,11 @@ function hbs(done) {
     ], handleError(done));
 }
 
+const jsWatcher = () => watch('assets/js/*.js', js);
 const sassWatcher = () => watch('assets/css/sass/*.scss', scss);
 const cssWatcher = () => watch('assets/css/*.css', css);
 const hbsWatcher = () => watch(['*.hbs', '**/**/*.hbs', '!node_modules/**/*.hbs'], hbs);
-const watcher = parallel(sassWatcher, cssWatcher, hbsWatcher);
+const watcher = parallel(jsWatcher, sassWatcher, cssWatcher, hbsWatcher);
 const build = series(scss, css, js);
 const dev = series(build, serve, watcher);
 
