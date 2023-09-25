@@ -206,6 +206,20 @@ article.feature-card.card {
 }
 
 /*********************************
+Guild Member card changes
+*********************************/
+//positioning of Text
+.guild-member-card .message-body {
+  position: relative;
+}
+
+h1.guild-member-card-name {
+  position: absolute;
+  bottom: 10px;
+  background-color: #e7cbcfaa;
+}
+
+/*********************************
 Hero Header changes
 *********************************/
 #hero-header-logo {
