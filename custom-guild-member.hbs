@@ -1,5 +1,45 @@
 {{!< default}}
 
-<main class="container">
-    <h1>This is a test custom template</h1>
-</main>
+{{#post}}
+    <article class="box container is-widescreen mt-5">
+        <div class="is-hidden-mobile">
+            <div class="media">
+                <div class="media-left box p-2 mt-2 has-background-dark">
+                    <p class="image is-128x128">
+                        <img src="{{feature_image}}">
+                    </p>
+                </div>
+
+                <div class="media-content mr-6 ml-3">
+                    <header class="mb-4">
+                        <div class="has-background-white">
+                            <h1 class="title is-1">{{title}}</h1>
+                        </div>
+                    </header>
+
+                    <section class="media-content content has-text-dark mt-5 is-size-5 is-hidden-mobile">
+                        {{content}}
+                    </section>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="is-hidden-tablet">
+            <div class="card mb-4">
+                <div class="card-image">
+                    <figure class="image is-5x3">
+                        <img src="{{feature_image}}" alt="{{title}} profile picture" style="object-fit: cover">
+                    </figure>
+                </div>
+
+                <div class="card-content py-3 has-text-centered has-background-dark">
+                    <h1 class="title has-text-primary-light is-4">{{title}}</h1>
+                </div>
+            </div>
+            <section class="content has-text-dark is-size-6-mobile">
+                {{content}}
+            </section>
+        </div>
+    </article>
+{{/post}}
