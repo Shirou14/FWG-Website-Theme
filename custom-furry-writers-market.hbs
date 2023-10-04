@@ -1,0 +1,27 @@
+{{!< default}}
+
+<main class="container">
+    {{#post}}
+        <article class="box container is-widescreen mt-5 mb-5">
+            <header class="post__background-image mb-6">
+                <div class="post__background-image-text has-background-white">
+                    <h1 class="title is-1 is-size-4-mobile">{{title}}</h1>
+                </div>
+            </header>
+            <section class="content has-text-dark mx-6 is-size-5 is-hidden-mobile">
+                {{content}}
+            </section>
+            <section class="content has-text-dark is-size-6-mobile is-hidden-tablet">
+                {{content}}
+            </section>
+        </article>
+
+        <!--<div class="columns is-multiline my-3 mx-1">
+            {{#get "posts" include="tags,authors" filter="primary_tag:submission" limit="all" order="title asc"}}
+                {{#foreach posts}}
+                    {{> post_card}}
+                {{/foreach}}
+            {{/get}}
+        </div>-->
+    {{/post}}
+</main>
