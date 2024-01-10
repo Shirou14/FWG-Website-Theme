@@ -5,27 +5,27 @@
                     <h1 class="card-header-title title is-4 is-spaced title-name pb-0">{{title}}</h1>
                 </a>
                 {{#primary_author}}
-                <button class="card-header-icon pt-0">
-                    <div class="media">
-                        <div class="media-left mr-2">
-                            {{#if profile_image}}
-                                <figure class="image is-48x48">
-                                    <img class="is-rounded" src="{{profile_image}}" alt="Placeholder image">
-                                </figure>
-                            {{else}}
-                                <span class="icon is-large">
-                                    <i class="fas fa-2x fa-paw"></i>
-                                </span>
-                            {{/if}}
-                        </div>
+                    <button class="card-header-icon pt-0">
+                        <div class="media">
+                            <div class="media-left mr-2">
+                                {{#if profile_image}}
+                                    <figure class="image is-48x48">
+                                        <img class="is-rounded" src="{{profile_image}}" alt="Placeholder image">
+                                    </figure>
+                                {{else}}
+                                    <span class="icon is-large">
+                                        <i class="fas fa-2x fa-paw"></i>
+                                    </span>
+                                {{/if}}
+                            </div>
 
-                        <div class="media-content">
-                            <h1 class="card-header-title subtitle is-5 is-italic author-name pl-0">
-                                <a href="{{url}}">by {{name}}</a>
-                            </h1>
+                            <div class="media-content">
+                                <h1 class="card-header-title subtitle is-5 is-italic author-name pl-0">
+                                    <a href="{{url}}">by {{name}}</a>
+                                </h1>
+                            </div>
                         </div>
-                    </div>
-                </button>
+                    </button>
                     
                 {{/primary_author}}
 
