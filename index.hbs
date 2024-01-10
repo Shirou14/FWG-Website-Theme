@@ -14,11 +14,13 @@
         </div>
 
         <div class="column is-centered">
+            {{pagination}}
             {{#foreach posts}}
                 {{^if featured}}
                     {{> post_card}}
                 {{/if}}
             {{/foreach}}
+            {{pagination}}
         </div>
     </div>
 </main>

@@ -1,0 +1,19 @@
+<article class="author-card column is-one-third">
+    <a href="{{url}}" class="card mb-4">
+        <div class="card-image">
+             {{#if profile_image}}
+                <figure class="image is-5by3" width="460px">
+                    <img class="" src="{{profile_image}}" alt="{{name}} profile picture" style="object-fit: cover">
+                </figure>
+            {{else}}
+                <figure class="image is-5by3" width="460px">
+                    <img class="" src="{{@site.logo}}" alt="Placeholder profile picture for {{name}}" style="object-fit: cover">
+                </figure>
+            {{/if}}
+        </div>
+
+        <div class="card-content py-3 px-1 has-text-centered has-background-white">
+            <h1 class="title has-text-primary-dark is-4">{{name}}</h1>
+        </div>
+    </a>
+</article>

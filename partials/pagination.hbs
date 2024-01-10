@@ -1,9 +1,59 @@
-<nav class="pagination is-medium" role="navigation" arias-label="pagination">
-    {{#if prev}}
-        <a href="{{page_url prev}}" class="pagination-next">Newer Posts</a>
-    {{/if}}
-    <span class="pagination-link is-current">Page {{page}} of {{pages}}</span>
-    {{#if next}}
-        <a href="{{page_url next}}" class="pagination-previous">Older Posts</a>
-    {{/if}}
+<nav class="columns pagination is-small is-dark" role="navigation" arias-label="pagination">
+    <div class="column is-one-third">
+        {{#if prev}}
+            <span>
+                <a href="{{page_url prev}}" class="pagination-next has-background-white has-text-weight-bold">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fas fa-caret-left"></i>
+                        </span>
+
+                        <span>Newer Posts</span>
+                    </span>
+                </a>
+            </span>
+        {{/if}}
+        {{#unless prev}}
+            <span class="pagination-next has-background-light has-text-grey-light has-text-weight-bold">
+                <span class="icon-text">
+                    <span class="icon">
+                        <i class="fas fa-caret-left"></i>
+                    </span>
+
+                    <span>Newer Posts</span>
+                </span>
+            </span>
+        {{/unless}}
+    </div>
+
+    <div class="column is-one-third">
+        <span class="pagination-link is-current">Page {{page}} of {{pages}}</span>
+    </div>
+
+    <div class="column is-one-third">
+        {{#if next}}
+            <span>
+                <a href="{{page_url next}}" class="pagination-previous has-background-white has-text-weight-bold">
+                    <span class="icon-text">
+                        <span>Older Posts</span>
+
+                        <span class="icon">
+                            <i class="fas fa-caret-right"></i>
+                        </span>
+                    </span>
+                </a>
+            </span>
+        {{/if}}
+        {{#unless next}}
+            <span class="pagination-next has-background-light has-text-grey-light has-text-weight-bold">
+                <span class="icon-text">
+                    <span>Older Posts</span>
+
+                    <span class="icon">
+                        <i class="fas fa-caret-right"></i>
+                    </span>
+                </span>
+            </span>
+        {{/unless}}
+    </div>
 </nav>

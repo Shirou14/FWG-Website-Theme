@@ -1,0 +1,35 @@
+<nav class="columns pagination is-small is-dark" role="navigation" arias-label="pagination">
+    <div class="column">
+        {{#next_post}}
+            <span class="is-pulled-left">
+                <a href="{{url}}" class="pagination-next has-background-white has-text-weight-bold">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fas fa-caret-left"></i>
+                        </span>
+
+                        <span>{{title}}</span>
+                    </span>
+                </a>
+            </span>
+        {{/next_post}}
+    </div>
+
+    <div class="column"></div>
+
+    <div class="column">
+        {{#prev_post}}
+            <span class="is-pulled-right">
+                <a href="{{url}}" class="pagination-previous has-background-white has-text-weight-bold">
+                    <span class="icon-text">
+                        <span>{{title}}</span>
+
+                        <span class="icon">
+                            <i class="fas fa-caret-right"></i>
+                        </span>
+                    </span>
+                </a>
+            </span>
+        {{/prev_post}}
+    </div>
+</nav>

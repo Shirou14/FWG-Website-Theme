@@ -16,6 +16,32 @@
 
             <div class="navbar-item has-dropdown is-hoverable">
                 <div class="navbar-link has-text-weight-bold">
+                    Posts
+                </div>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item has-text-weight-bold" href="/tag/news">
+                        News
+                    </a>
+                    <a class="navbar-item has-text-weight-bold" href="/tag/announcement">
+                        Announcements
+                    </a>
+                    <a class="navbar-item has-text-weight-bold" href="/tag/interview">
+                        Interviews
+                    </a>
+                    <a class="navbar-item has-text-weight-bold" href="/tag/submission-call">
+                        Submissions
+                    </a>
+
+                    <hr class="navbar-divider">
+
+                    <a class="navbar-item has-text-weight-bold" href="/search-by-author">
+                        Search by Author
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <div class="navbar-link has-text-weight-bold">
                     About Us
                 </div>
                 <div class="navbar-dropdown">
@@ -86,7 +112,8 @@
         </div>
 
         <div class="navbar-end ml-5 is-hidden-touch">
-            {{> social_media}}
+            <!--{{> social_media}}-->
+            {{search}}
         </div>
         
         <hr class="navbar-divider">
