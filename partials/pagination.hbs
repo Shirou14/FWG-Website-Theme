@@ -1,4 +1,4 @@
-<nav class="columns pagination is-small is-dark" role="navigation" arias-label="pagination">
+<nav class="columns pagination is-small is-dark is-hidden-touch" role="navigation" arias-label="pagination">
     <div class="column is-one-third">
         {{#if prev}}
             <span>
@@ -8,7 +8,7 @@
                             <i class="fas fa-caret-left"></i>
                         </span>
 
-                        <span>Newer Posts</span>
+                        <span class="is-hidden-touch">Newer Posts</span>
                     </span>
                 </a>
             </span>
@@ -20,7 +20,7 @@
                         <i class="fas fa-caret-left"></i>
                     </span>
 
-                    <span>Newer Posts</span>
+                    <span class="is-hidden-touch">Newer Posts</span>
                 </span>
             </span>
         {{/unless}}
@@ -35,7 +35,7 @@
             <span>
                 <a href="{{page_url next}}" class="pagination-previous has-background-white has-text-weight-bold">
                     <span class="icon-text">
-                        <span>Older Posts</span>
+                        <span class="is-hidden-touch">Older Posts</span>
 
                         <span class="icon">
                             <i class="fas fa-caret-right"></i>
@@ -47,8 +47,60 @@
         {{#unless next}}
             <span class="pagination-next has-background-light has-text-grey-light has-text-weight-bold">
                 <span class="icon-text">
-                    <span>Older Posts</span>
+                    <span class="is-hidden-touch">Older Posts</span>
 
+                    <span class="icon">
+                        <i class="fas fa-caret-right"></i>
+                    </span>
+                </span>
+            </span>
+        {{/unless}}
+    </div>
+</nav>
+
+<nav class="columns pagination is-medium is-dark is-hidden-desktop" role="navigation" arias-label="pagination">
+    <div class="column is-one-third">
+        {{#if prev}}
+            <span>
+                <a href="{{page_url prev}}" class="pagination-next has-background-white has-text-weight-bold">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fas fa-caret-left"></i>
+                        </span>
+                    </span>
+                </a>
+            </span>
+        {{/if}}
+        {{#unless prev}}
+            <span class="pagination-next has-background-light has-text-grey-light has-text-weight-bold">
+                <span class="icon-text">
+                    <span class="icon">
+                        <i class="fas fa-caret-left"></i>
+                    </span>
+                </span>
+            </span>
+        {{/unless}}
+    </div>
+
+    <div class="column is-one-third p-0">
+        <span class="pagination-link is-current">{{page}} /{{pages}}</span>
+    </div>
+
+    <div class="column is-one-third">
+        {{#if next}}
+            <span>
+                <a href="{{page_url next}}" class="pagination-previous has-background-white has-text-weight-bold">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fas fa-caret-right"></i>
+                        </span>
+                    </span>
+                </a>
+            </span>
+        {{/if}}
+        {{#unless next}}
+            <span class="pagination-next has-background-light has-text-grey-light has-text-weight-bold">
+                <span class="icon-text">
                     <span class="icon">
                         <i class="fas fa-caret-right"></i>
                     </span>

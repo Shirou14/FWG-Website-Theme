@@ -48,10 +48,11 @@
             <div class="card-footer-item">
                 <h4 class="date">{{date}}</h4>
             </div>
-            <div class="card-footer-item">
-                {{#primary_tag}}
-                    <a href="{{url}}" class="is-{{name}} is-primary is-light tag">{{name}}</a>
-                {{/primary_tag}}
+
+            <div class="card-footer-item tags">
+                {{#foreach tags}}
+                    <a href="{{url}}" class="is-{{name}} is-primary is-light tag mr-1">{{name}}</a>
+                {{/foreach}}
             </div>
         </footer>
 </article>

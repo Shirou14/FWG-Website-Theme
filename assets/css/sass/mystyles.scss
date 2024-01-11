@@ -128,6 +128,10 @@ article.post-card .card-header h1.title{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, serif;
 }
 
+article.post-card .card-header a h1.title:hover{
+  color: $card-default-subtitle-color;
+}
+
 article.post-card .card-header h1.subtitle{
   color: $card-default-subtitle-color;
 }
@@ -149,6 +153,10 @@ article.post-card.interview .card-header h1.title{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, serif;
 }
 
+article.post-card.interview .card-header a h1.title:hover{
+  color: $card-interview-subtitle-color;
+}
+
 article.post-card.interview .card-header h1.subtitle{
   color: $card-interview-subtitle-color;
 }
@@ -168,6 +176,10 @@ article.post-card.submission .card-header {
 article.post-card.submission .card-header h1.title{
   color: $card-submission-title-color;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, serif;
+}
+
+article.post-card.submission .card-header a h1.title:hover{
+  color: $card-submission-subtitle-color;
 }
 
 article.post-card.submission .card-header h1.subtitle{
@@ -192,6 +204,10 @@ article.post-card.announcement .card-header {
 article.post-card.announcement .card-header h1.title{
   color: $card-announcement-title-color;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, serif;
+}
+
+article.post-card.announcement .card-header a h1.title:hover{
+  color: $card-announcement-subtitle-color;
 }
 
 article.post-card.announcement .card-header h1.subtitle{
@@ -252,6 +268,18 @@ Link changes
 *********************************/
 article.contact-card.message div.message-body ul.links li a {
   text-decoration: none!important;
+}
+
+article.contact-card.message div.message-body ul.links li a :hover{
+  text-decoration: underline;
+}
+
+main.post .content a{
+  text-decoration: underline;
+}
+
+main.post .content a:hover{
+  text-decoration: none;
 }
 
 /*********************************

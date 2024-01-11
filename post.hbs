@@ -1,5 +1,5 @@
 {{!< default}}
-<main class="container">
+<main class="container post">
     <div class="columns is-multiline pt-5 pb-5 mx-4">
         <div class="column side-bar is-one-fifth pr-0 is-hidden-touch">
             {{> contact_card}}
@@ -14,14 +14,23 @@
                             <h1 class="title is-1 is-size-4-mobile">{{title}}</h1>
                             <h2 class="subtitle is-4 is-size-5-mobile">By {{#authors}}{{name}}{{/authors}}</h2>
                         </div>
+
+                        <section class="tags mt-2">
+                            {{#foreach tags}}
+                                <a href="{{url}}" class="is-{{name}} is-primary is-light tag mr-1">{{name}}</a>
+                            {{/foreach}}
+                        </section>
                     </header>
+
                     <section class="content has-text-dark mx-6 is-size-5 is-hidden-mobile">
                         {{content}}
                     </section>
+
                     <section class="content has-text-dark is-size-6-mobile is-hidden-tablet">
                         {{content}}
                     </section>
                 </article>
+
                 {{> post-pagination}}    
             {{/post}}
         </div>
