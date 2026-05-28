@@ -3,9 +3,9 @@
     "description": "A theme for FWG",
     "version": "1.0.0",
     "engines": {
-        "ghost": ">=4.3.3",
-        "ghost-api": "v4"
+        "ghost": ">=6.42.0"
     },
+    "keywords": ["ghost-theme"],
     "author": {
         "name": "Shirou",
         "email": "shirou14@proton.me"

@@ -1,0 +1,40 @@
+{{!< default}}
+<main class="container post">
+    <div class="columns is-multiline pt-5 pb-5 mx-4">
+        <div class="column side-bar is-one-fifth pr-0 is-hidden-touch">
+            {{> contact_card}}
+            {{> reach_out_card}}
+        </div>
+
+        <div class="column is-centered">
+            {{#post}}
+                <article class="box container is-widescreen">
+                    {{#if @page.show_title_and_feature_image}}
+                    <header class="post__background-image mb-6" style="background-image: url({{feature_image}})">
+                        <div class="post__background-image-text has-background-white">
+                            <h1 class="title is-1 is-size-4-mobile">{{title}}</h1>
+                            
+                            <h4 class="subtitle is-6 is-size-6-mobile">
+                                Last Updated: 
+                                <time class="post-date" datetime="{{date updated_at format='YYYY-MM-DD'}}">
+                                    {{date updated_at format='YYYY-MM-DD'}}
+                                </time>
+                            </h4>
+                        </div>
+                    </header>
+                    {{/if}}
+
+                    <section class="content has-text-dark mx-6 is-size-5 is-hidden-mobile">
+                        {{content}}
+                    </section>
+
+                    <section class="content has-text-dark is-size-6-mobile is-hidden-tablet">
+                        {{content}}
+                    </section>
+                </article>
+
+                {{> post-pagination}}    
+            {{/post}}
+        </div>
+    </div>
+</main>

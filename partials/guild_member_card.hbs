@@ -2,7 +2,12 @@
     <a href="{{url}}" class="card mb-4">
         <div class="card-image">
             <figure class="image is-5by3" width="460px">
-                <img src="{{feature_image}}" alt="{{title}} profile picture" style="object-fit: cover">
+                {{#if feature_image}}
+                    <img src="{{feature_image}}" alt="{{title}} profile picture" style="object-fit: cover">
+                {{/if}}
+                {{#unless feature_image}}
+                    <img src="{{asset 'img/fwg-books.jpeg'}}" alt="{{title}} profile picture" style="object-fit: cover">
+                {{/unless}}
             </figure>
         </div>
 
